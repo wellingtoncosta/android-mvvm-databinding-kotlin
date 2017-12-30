@@ -1,0 +1,35 @@
+*.iml
+.gradle
+/local.properties
+
+# IDEA config files
+.idea/
+/.idea/workspace.xml
+/.idea/libraries
+/.idea/misc.xml
+.idea/modules.xml
+/.idea/vcs.xml
+
+# Java class files
+*.class
+
+# Legacy Eclipse project files
+.classpath
+.project
+
+### Eclipse ###
+
+.metadata
+tmp/
+*.tmp
+*.bak
+*~.nib
+.settings/
+.loadpath
+.recommenders
+
+
+
+/build
+/captures
+.externalNativeBuild
