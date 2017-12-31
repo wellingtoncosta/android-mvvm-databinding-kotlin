@@ -3,6 +3,8 @@ package br.com.wellingtoncosta.amdk.di.modules
 import br.com.wellingtoncosta.amdk.data.remote.Api
 import br.com.wellingtoncosta.amdk.domain.repository.ColorRepository
 import br.com.wellingtoncosta.amdk.domain.repository.UserRepository
+import br.com.wellingtoncosta.amdk.util.schedulers.BaseScheduler
+import br.com.wellingtoncosta.amdk.util.schedulers.SchedulerProvider
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -11,7 +13,7 @@ import javax.inject.Singleton
 /**
  * @author Wellington Costa on 31/12/2017.
  */
-@Module
+@Module(includes = [(ViewModelModule::class)])
 class AppModule {
 
     @Provides
@@ -30,6 +32,12 @@ class AppModule {
     @Singleton
     fun provideColorRepository(api: Api): ColorRepository {
         return ColorRepository(api)
+    }
+
+    @Provides
+    @Singleton
+    fun provideScheduler(): BaseScheduler {
+        return SchedulerProvider()
     }
 
 }
