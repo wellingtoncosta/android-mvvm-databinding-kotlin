@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import br.com.wellingtoncosta.amdk.R
 import br.com.wellingtoncosta.amdk.databinding.ActivityMainBinding
+import br.com.wellingtoncosta.amdk.ui.colors.ListColorsFragment
 import dagger.android.support.DaggerAppCompatActivity
 import br.com.wellingtoncosta.amdk.ui.common.ViewPagerAdapter
 import br.com.wellingtoncosta.amdk.ui.users.ListUsersFragment
@@ -33,7 +34,9 @@ class MainActivity : DaggerAppCompatActivity() {
 
     private fun setupTabs() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
+
         adapter.addFragment(ListUsersFragment(), getString(R.string.users))
+        adapter.addFragment(ListColorsFragment(), getString(R.string.colors))
 
         binding.viewPager.adapter = adapter
         binding.includeToolbar?.tabs?.setupWithViewPager(binding.viewPager)

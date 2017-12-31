@@ -1,5 +1,6 @@
 package br.com.wellingtoncosta.amdk.di.modules
 
+import br.com.wellingtoncosta.amdk.ui.colors.ListColorsFragment
 import dagger.Module
 import br.com.wellingtoncosta.amdk.ui.users.ListUsersFragment
 import dagger.android.ContributesAndroidInjector
@@ -12,5 +13,8 @@ interface FragmentBuildersModule {
 
     @ContributesAndroidInjector
     fun contributeListUsersFragment(): ListUsersFragment
+
+    @ContributesAndroidInjector
+    fun contributeListColorsFragment(): ListColorsFragment
 
 }
