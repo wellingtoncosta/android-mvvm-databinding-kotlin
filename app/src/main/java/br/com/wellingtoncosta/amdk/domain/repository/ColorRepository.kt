@@ -9,7 +9,7 @@ import javax.inject.Inject
 /**
  * @author Wellington Costa on 30/12/2017.
  */
-class ColorRepository @Inject constructor(private val api: Api) {
+open class ColorRepository @Inject constructor(private val api: Api) {
 
     fun getColors(): Observable<ApiListResponse<Color>> {
         return api.fetchColors()

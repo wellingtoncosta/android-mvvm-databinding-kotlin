@@ -13,9 +13,9 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.0-beta4'
 
     // Android ViewModel
-    implementation "android.arch.lifecycle:extensions:1.0.0"
-    implementation "android.arch.lifecycle:common-java8:1.0.0"
-    implementation "android.arch.lifecycle:reactivestreams:1.0.0"
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+    implementation "android.arch.lifecycle:common-java8:1.1.0"
+    implementation "android.arch.lifecycle:reactivestreams:1.1.0"
 
     // Facebook Fresco
     implementation 'com.facebook.fresco:fresco:1.5.0'
@@ -39,7 +39,7 @@ dependencies {
     // Unit Tests
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-core:2.13.0'
-    testImplementation 'android.arch.core:core-testing:1.0.0'
+    testImplementation 'android.arch.core:core-testing:1.1.0'
 
     // Android Tests
     androidTestImplementation 'org.mockito:mockito-android:2.13.0'
