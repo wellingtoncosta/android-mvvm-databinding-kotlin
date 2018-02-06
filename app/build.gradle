@@ -4,14 +4,14 @@ apply plugin: 'kotlin-kapt'
 apply from: './dependencies.gradle'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         applicationId "br.com.wellingtoncosta.amdk"
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "br.com.wellingtoncosta.amdk.TestAppRunner"
         vectorDrawables.useSupportLibrary = true
         buildConfigField("String", "API_URL", "\"https://reqres.in/api/\"")
     }
@@ -28,5 +28,9 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    sourceSets {
+        androidTest.java.srcDirs += "src/test-common/java"
+        test.java.srcDirs += "src/test-common/java"
     }
 }
