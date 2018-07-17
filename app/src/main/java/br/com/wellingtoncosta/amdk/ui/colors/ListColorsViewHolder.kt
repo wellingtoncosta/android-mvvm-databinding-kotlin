@@ -10,6 +10,6 @@ import br.com.wellingtoncosta.amdk.databinding.ListColorsItemBinding
  */
 class ListColorsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-    val binding: ListColorsItemBinding = DataBindingUtil.bind(view)
+    val binding: ListColorsItemBinding? = DataBindingUtil.bind(view)
 
 }

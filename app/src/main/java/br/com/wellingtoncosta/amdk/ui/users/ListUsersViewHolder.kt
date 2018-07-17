@@ -10,6 +10,6 @@ import br.com.wellingtoncosta.amdk.databinding.ListUsersItemBinding
  */
 class ListUsersViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-    val binding: ListUsersItemBinding = DataBindingUtil.bind(view)
+    val binding: ListUsersItemBinding? = DataBindingUtil.bind(view)
 
 }

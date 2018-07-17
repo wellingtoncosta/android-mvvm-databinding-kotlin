@@ -21,7 +21,7 @@ class ListUsersAdapter constructor(list: List<User>) : BaseAdapter<User>(list) {
     override fun onBindViewHolderBase(holder: RecyclerView.ViewHolder?, position: Int) {
         val binding = (holder as ListUsersViewHolder).binding
         val user = list[position]
-        binding.user = user
+        binding?.user = user
     }
 
 }

@@ -21,7 +21,7 @@ class ListColorsAdapter constructor(list: List<Color>) : BaseAdapter<Color>(list
     override fun onBindViewHolderBase(holder: RecyclerView.ViewHolder?, position: Int) {
         val binding = (holder as ListColorsViewHolder).binding
         val color = list[position]
-        binding.color = color
+        binding?.color = color
     }
 
 }
