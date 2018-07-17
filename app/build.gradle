@@ -15,6 +15,10 @@ android {
         vectorDrawables.useSupportLibrary = true
         buildConfigField("String", "API_URL", "\"https://reqres.in/api/\"")
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     dataBinding {
         enabled = true
     }
